@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register form</title>
+  <link rel="stylesheet" href="css/register.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inconsolata:wght@200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <h2>Inventory Registration</h2>
+  <form method="post" action="/register" enctype="multipart/form-data">
+    <div id="name">
+      <label for="note_name_input">Name:</label> 
+      <input type="text" id="inventory_name" name="inventory_name">  
+    </div>
+    <div id="textarea">
+      <label for="note_input">Description:</label> 
+      <textarea id="description" name="description" rows="4" cols="50"></textarea>
+    </div>
+    <div id="photo">  
+      <label for="photo">Photo:</label> 
+      <input type="file" id="photo_id" name="photo">  
+    </div>
+    <button id="button" type="submit">Register</button>
+  </form>
+</body>
+</html>
