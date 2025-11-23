@@ -10,5 +10,11 @@
     "name": "kitties",
     "description": "khdfsjsdnfnsd",
     "photo": "1763926145977-6.jpg"
+  },
+  {
+    "id": "1763929843964",
+    "name": "another testing name",
+    "description": "string",
+    "photo": "1763929939555-8.jpg"
   }
 ]

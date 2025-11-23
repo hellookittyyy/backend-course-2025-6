@@ -3,6 +3,8 @@ import { program } from 'commander';
 import fs from 'fs/promises';
 import path from 'path';
 import multer from 'multer';
+import swaggerJsDoc from 'swagger-jsdoc';      
+import swaggerUi from 'swagger-ui-express';
 
 program
   .requiredOption('-h, --host <string>', 'server host')
@@ -13,6 +15,21 @@ program.parse(process.argv);
 const { host, port, cache } = program.opts();
 
 const app = express();
+
+const swaggerOptions = {
+    swaggerDefinition: {
+        openapi: '3.0.0', 
+        info: {
+            title: "Apishka",
+            description: "lab work",
+            servers: [`http://${host}:${port}`]
+        }
+    },
+    apis: ['docs.js']
+};
+
+const swaggerDocs = swaggerJsDoc(swaggerOptions);
+app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 app.use(express.json()); 
 app.use(express.urlencoded({ extended: true })); 
