@@ -129,8 +129,6 @@ app.get('/inventory/:id/photo', (req, res) => {
     res.sendFile(path.resolve(cache, item.photo));
 });
 
-app.all('/inventory/:id/photo', (req, res) => res.status(405).send('Method not allowed'));
-
 app.put('/inventory/:id/photo', upload.single('photo'), async (req, res) => {
     const item = inventory.find(i => i.id === req.params.id);
     if (!item) return res.status(404).send('Not found');

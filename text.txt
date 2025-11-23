@@ -12,5 +12,5 @@ Method Not Allowed:
 curl -v -X DELETE http://localhost:666/register - for register allowed just POST
 curl -v -X POST http://localhost:666/search - for search allowed just GET
 curl -v -X DELETE http://localhost:666/inventory - for inventory allowed just GET
-curl -v -X POST http://localhost:666/inventory/ID- for inventory/id allowed just GET, PUT, DELETE
-curl -v -X DELETE http://localhost:666/inventory/ID/photo - for inventory/ID/photo allowed just GET, PUT
+curl -v -X POST http://localhost:666/inventory/1763925832019 - for inventory/id allowed just GET, PUT, DELETE
+curl -v -X DELETE http://localhost:666/inventory/1763925832019/photo - for inventory/ID/photo allowed just GET, PUT
