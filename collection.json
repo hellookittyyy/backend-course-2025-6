@@ -1,0 +1,219 @@
+{
+	"info": {
+		"_postman_id": "53187a06-8410-4399-9b4f-0ca01ca91702",
+		"name": "Kitties collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44080016",
+		"_collection_link": "https://solar-spaceship-8780078.postman.co/workspace/hello_kitty's-Workspace~f921faad-5828-42b3-88d8-43cc3ded6d16/collection/44080016-53187a06-8410-4399-9b4f-0ca01ca91702?action=share&source=collection_link&creator=44080016"
+	},
+	"item": [
+		{
+			"name": "Register Item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "inventory_name",
+							"value": "Postman Cat",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Testing via Postman",
+							"type": "text"
+						},
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1f0c8a45-7ac5-4970-a431-cedbf2f154d5"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get inventory list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/inventory",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get one item by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/inventory/1763926870909",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"inventory",
+						"1763926870909"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get item photo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/inventory/1763926870909/photo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"inventory",
+						"1763926870909",
+						"photo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update item info",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"another name\",\r\n    \"description\": \"Updated description\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:666/inventory/1763926870909",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"inventory",
+						"1763926870909"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update item photo",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "photo",
+							"type": "file",
+							"src": "postman-cloud:///1f0c8a56-288f-4ff0-a6d3-21667c5967ce"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:666/inventory/1763926870909/photo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"inventory",
+						"1763926870909",
+						"photo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search with or without photo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/search?id=1763926870909&includePhoto=on",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1763926870909"
+						},
+						{
+							"key": "includePhoto",
+							"value": "on"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:666/inventory/1763925832019",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "666",
+					"path": [
+						"inventory",
+						"1763925832019"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
