@@ -80,13 +80,14 @@ form div{
     cursor: pointer;
     color: #850075;
     width: 100%;
+    transition: 0.7s;
 }
 
 #button:hover{
     background-color: #22ff00;
     color: #028000;
     border-bottom: 7px solid #195f00;
-    transition: 0.3s;
+    transform: scale(1.02);
 }
 
 #two input[type="checkbox"]{

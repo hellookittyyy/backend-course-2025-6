@@ -1,0 +1,16 @@
+POST /register - http://localhost:666/RegisterForm.html
+GET /inventory - http://localhost:666/inventory
+GET /inventory/<ID> - http://localhost:666/inventory/ID
+PUT /inventory/<ID> - curl -X PUT -H "Content-Type: application/json" -d '{"name": "NAME"}' http://localhost:666/inventory/ID
+GET /inventory/<ID>/photo - http://localhost:666/inventory/ID/photo
+PUT /inventory/<ID>/photo - curl -X PUT -F "photo=@images/image.jpg" http://localhost:666/inventory/ID/photo
+DELETE /inventory/<ID> - curl -X DELETE http://localhost:666/inventory/ID
+GET /RegisterForm.html - http://localhost:666/RegisterForm.html
+GET /SearchForm.html - http://localhost:666/SearchForm.html
+
+Method Not Allowed:
+curl -v -X DELETE http://localhost:666/register - for register allowed just POST
+curl -v -X POST http://localhost:666/search - for search allowed just GET
+curl -v -X DELETE http://localhost:666/inventory - for inventory allowed just GET
+curl -v -X POST http://localhost:666/inventory/ID- for inventory/id allowed just GET, PUT, DELETE
+curl -v -X DELETE http://localhost:666/inventory/ID/photo - for inventory/ID/photo allowed just GET, PUT

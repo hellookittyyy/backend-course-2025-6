@@ -1,0 +1,49 @@
+body {
+    background-image: url(../images/15.jpg);
+    background-size: cover;
+    background-position: center; 
+    color: #ff69b4; 
+    font-family: 'Inconsolata', monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
+    color: #29000d; 
+    letter-spacing: 2px;
+    border-bottom: 5px solid #290012;
+}
+
+.card {
+    background: #ff24ba9c;
+    padding: 40px;
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+}
+
+a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 15px 35px;
+    background-color: #ec0076;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-size: 20px;
+}
+
+a:hover {
+    background-color: #ff78c0;
+    transform: scale(1.05);
+    cursor: pointer;
+}
