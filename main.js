@@ -94,7 +94,7 @@ app.get('/search', (req, res) => {
     const { id, includePhoto } = req.query; 
 
     const item = inventory.find(i => i.id === id);
-    if (!item) return res.status(404).send('Not Found');
+    return res.status(400).sendFile(path.resolve('search_error.html'));
 
     const resultItem = { ...item };
 
