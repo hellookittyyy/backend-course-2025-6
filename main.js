@@ -72,7 +72,7 @@ app.post('/register', upload.single('photo'), async (req, res) => {
                 console.log('File deleted due to missing inventory_name');
             } catch (err) { console.error('Error deleting file', err); }
         }
-        return res.status(400).send('Bad Request: inventory_name is required');
+        return res.status(400).sendFile(path.resolve('Error.html'));
     }
 
     const newItem = {

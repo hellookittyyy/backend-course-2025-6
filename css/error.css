@@ -1,5 +1,5 @@
 body {
-    background-image: url(../images/16.png);
+    background-image: url('../images/15.jpg'); 
     background-size: cover;
     background-position: center; 
     color: #ff69b4; 
@@ -13,40 +13,47 @@ body {
     text-align: center;
 }
 
+.card {
+    background: #ff24ba9c;
+    padding: 40px;
+    border: 2px solid #ff69b4;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5);
+    max-width: 500px; 
+}
 
 h1 {
     font-family: 'Bebas Neue', cursive;
     font-size: 3rem;
-    color: #012900;
+    color: #3d0000; 
     letter-spacing: 2px;
-    border-bottom: 5px solid #012900;
+    border-bottom: 5px solid #3d0000;
+    margin-top: 0;
 }
 
-.card {
-    background: #4eff249c;
-    padding: 40px;
-    border: 2px solid #b9ff83;
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgb(243 255 105 / 50%);
+p {
+    font-size: 1.5rem;
+    color: #3d0000; 
+    font-weight: bolder;
+    margin: 20px 0;
 }
 
 a {
     display: inline-block;
     margin-top: 15px;
     padding: 15px 35px;
-    background-color: #dcec00;
-    color: #c15000;
+    background-color: #ec0076;
+    color: #000;
     text-decoration: none;
     font-weight: bold;
     border-radius: 6px;
     transition: 0.3s;
     font-size: 20px;
+    border: 1px solid #000; 
 }
 
 a:hover {
     background-color: #ff78c0;
     transform: scale(1.05);
-    background-color: #c15000;
-    color: #dcec00;
     cursor: pointer;
 }
