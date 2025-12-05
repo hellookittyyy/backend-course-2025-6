@@ -91,14 +91,16 @@ app.post('/register', upload.single('photo'), async (req, res) => {
 app.all('/register', (req, res) => res.status(405).send('Method not allowed'));
 
 app.get('/search', (req, res) => {
-    const { id, includePhoto } = req.query; 
+    const { id, includePhoto } = req.query;
+
+    if (!id) return res.status(400).sendFile(path.resolve('search_error.html'));
 
     const item = inventory.find(i => i.id === id);
-    return res.status(400).sendFile(path.resolve('search_error.html'));
+    if (!item) return res.status(404).sendFile(path.resolve('search_error.html'));
 
     const resultItem = { ...item };
 
-    if (includePhoto === 'on' && resultItem.photo) {
+    if ((includePhoto === 'on' || includePhoto === 'true') && resultItem.photo) {
         const photoLink = `http://${host}:${port}/inventory/${item.id}/photo`;
         resultItem.description += ` Photo: ${photoLink}`;
     }
